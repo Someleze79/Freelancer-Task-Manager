@@ -1,0 +1,13 @@
+/* ======================================================
+   🌍 GLOBAL STYLES
+====================================================== */
+
+@import "tailwindcss";
+
+/* Smooth font rendering */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f172a;
+  color: white;
+}
