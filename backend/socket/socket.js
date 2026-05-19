@@ -2,7 +2,8 @@
 // 🔌 SOCKET.IO SERVER
 // ======================================================
 
-import { Server } from "socket.io";
+import { Server }
+from "socket.io";
 
 let io;
 
@@ -15,8 +16,26 @@ export const initSocket = (server) => {
   io = new Server(server, {
 
     cors: {
-      origin: "http://localhost:5173",
-      methods: ["GET", "POST", "PUT", "DELETE"]
+
+      origin: [
+
+        "http://localhost:5173",
+
+        "https://freelancer-frontend.onrender.com"
+      ],
+
+      methods: [
+
+        "GET",
+
+        "POST",
+
+        "PUT",
+
+        "DELETE"
+      ],
+
+      credentials: true
     }
 
   });
@@ -27,46 +46,73 @@ export const initSocket = (server) => {
 
   io.on("connection", (socket) => {
 
-    console.log("⚡ User connected:", socket.id);
+    console.log(
+
+      "⚡ User connected:",
+
+      socket.id
+    );
 
     // ======================================================
     // 📁 JOIN PROJECT ROOM
     // ======================================================
 
-    socket.on("joinProject", (projectId) => {
+    socket.on(
 
-      socket.join(projectId);
+      "joinProject",
 
-      console.log(
-        `📁 User joined project room: ${projectId}`
-      );
+      (projectId) => {
 
-    });
+        socket.join(projectId);
+
+        console.log(
+
+          `📁 User joined project room: ${projectId}`
+        );
+      }
+    );
 
     // ======================================================
     // 💬 CHAT MESSAGE
     // ======================================================
 
-    socket.on("sendMessage", (messageData) => {
+    socket.on(
 
-      io.to(messageData.projectId)
-        .emit(
-          "receiveMessage",
-          messageData
-        );
+      "sendMessage",
 
-    });
+      (messageData) => {
+
+        io.to(messageData.projectId)
+
+          .emit(
+
+            "receiveMessage",
+
+            messageData
+          );
+      }
+    );
 
     // ======================================================
     // ⌨️ TYPING INDICATOR
     // ======================================================
 
-    socket.on("typing", (data) => {
+    socket.on(
 
-      socket.to(data.projectId)
-        .emit("userTyping", data);
+      "typing",
 
-    });
+      (data) => {
+
+        socket.to(data.projectId)
+
+          .emit(
+
+            "userTyping",
+
+            data
+          );
+      }
+    );
 
     // ======================================================
     // ❌ DISCONNECT
@@ -75,10 +121,11 @@ export const initSocket = (server) => {
     socket.on("disconnect", () => {
 
       console.log(
+
         "❌ User disconnected:",
+
         socket.id
       );
-
     });
 
   });

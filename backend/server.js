@@ -67,21 +67,41 @@ initSocket(server);
 // 🛡️ MIDDLEWARE
 // ======================================================
 
-app.use(cors());
+app.use(
+
+  cors({
+
+    origin: [
+
+      "http://localhost:5173",
+
+      "https://freelancer-frontend.onrender.com"
+    ],
+
+    credentials: true
+  })
+);
 
 app.use(express.json());
 
-app.use(express.urlencoded({
-  extended: true
-}));
+app.use(
+
+  express.urlencoded({
+
+    extended: true
+  })
+);
 
 // ======================================================
 // 📂 STATIC FILES
 // ======================================================
 
 app.use(
+
   "/uploads",
+
   express.static(
+
     path.resolve("uploads")
   )
 );
@@ -127,7 +147,6 @@ app.use(
 app.get("/", (req, res) => {
 
   res.send("🚀 API is running...");
-
 });
 
 // ======================================================
@@ -135,24 +154,23 @@ app.get("/", (req, res) => {
 // ======================================================
 
 mongoose.connect(
-  process.env.MONGO_URI
-)
 
-.then(() => {
+  process.env.MONGO_URI
+
+).then(() => {
 
   console.log(
     "✅ MongoDB Connected"
   );
 
-})
-
-.catch((error) => {
+}).catch((error) => {
 
   console.error(
+
     "❌ MongoDB Connection Error:",
+
     error
   );
-
 });
 
 // ======================================================
@@ -165,7 +183,7 @@ const PORT =
 server.listen(PORT, () => {
 
   console.log(
+
     `🚀 Server running on port ${PORT}`
   );
-
 });

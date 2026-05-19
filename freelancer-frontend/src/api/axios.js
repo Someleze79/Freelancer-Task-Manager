@@ -21,7 +21,9 @@ const API = axios.create({
   // ======================================================
 
   baseURL:
+
     import.meta.env.VITE_API_URL ||
+
     "http://localhost:5000/api"
 });
 
@@ -38,6 +40,7 @@ API.interceptors.request.use(
     // ======================================================
 
     const user = JSON.parse(
+
       localStorage.getItem("user")
     );
 
@@ -48,6 +51,7 @@ API.interceptors.request.use(
     if (user?.token) {
 
       req.headers.Authorization =
+
         `Bearer ${user.token}`;
     }
 
@@ -85,13 +89,20 @@ API.interceptors.response.use(
     if (error.response?.status === 401) {
 
       toast.error(
+
         "Session expired. Please login again."
       );
 
-      // Clear user
+      // ======================================================
+      // 🧹 CLEAR USER
+      // ======================================================
+
       localStorage.removeItem("user");
 
-      // Redirect to login
+      // ======================================================
+      // 🔁 REDIRECT
+      // ======================================================
+
       window.location.href = "/";
     }
 
@@ -102,6 +113,7 @@ API.interceptors.response.use(
     if (error.response?.status === 500) {
 
       toast.error(
+
         "Server error occurred"
       );
     }
@@ -113,6 +125,7 @@ API.interceptors.response.use(
     if (!error.response) {
 
       toast.error(
+
         "Network error. Check your connection."
       );
     }
