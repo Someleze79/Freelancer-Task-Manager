@@ -1,9 +1,9 @@
 // ======================================================
-// 📊 PREMIUM DASHBOARD STATISTICS
+// DASHBOARD STATISTICS
 // ======================================================
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function DashboardStats({
 }) {
 
   // ======================================================
-  // ✅ COMPLETED TASKS
+  // COMPLETED TASKS
   // ======================================================
 
   const completedTasks =
@@ -33,7 +33,7 @@ export default function DashboardStats({
     ).length;
 
   // ======================================================
-  // 📦 STATS DATA
+  // STATS DATA
   // ======================================================
 
   const stats = [
@@ -85,7 +85,7 @@ export default function DashboardStats({
   ];
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -110,7 +110,7 @@ export default function DashboardStats({
             key={stat.title}
 
             // ======================================================
-            // 🎞️ ENTRY ANIMATION
+            // ENTRY ANIMATION
             // ======================================================
 
             initial={{
@@ -129,7 +129,7 @@ export default function DashboardStats({
             }}
 
             // ======================================================
-            // ✨ HOVER EFFECT
+            // HOVER EFFECT
             // ======================================================
 
             whileHover={{
@@ -158,7 +158,7 @@ export default function DashboardStats({
           >
 
             {/* ======================================================
-                🌌 BACKGROUND GLOW
+                BACKGROUND GLOW
             ====================================================== */}
 
             <div className="
@@ -173,7 +173,7 @@ export default function DashboardStats({
             " />
 
             {/* ======================================================
-                📦 CONTENT
+                CONTENT
             ====================================================== */}
 
             <div className="
@@ -185,7 +185,7 @@ export default function DashboardStats({
             ">
 
               {/* ======================================================
-                  📊 TEXT
+                  TEXT
               ====================================================== */}
 
               <div>
@@ -229,7 +229,7 @@ export default function DashboardStats({
               </div>
 
               {/* ======================================================
-                  🎨 ICON
+                  ICON
               ====================================================== */}
 
               <motion.div
@@ -267,7 +267,7 @@ export default function DashboardStats({
             </div>
 
             {/* ======================================================
-                📈 FOOTER
+                FOOTER
             ====================================================== */}
 
             <div className="

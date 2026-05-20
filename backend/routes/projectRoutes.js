@@ -1,11 +1,11 @@
 // ======================================================
-// 📁 PROJECT ROUTES
+// PROJECT ROUTES
 // ======================================================
 
 import express from "express";
 
 // ======================================================
-// 📦 CONTROLLERS
+// CONTROLLERS
 // ======================================================
 
 import {
@@ -17,43 +17,43 @@ import {
 } from "../controllers/projectController.js";
 
 // ======================================================
-// 🔐 AUTH MIDDLEWARE
+// AUTH MIDDLEWARE
 // ======================================================
 
 import { protect } from "../middleware/authMiddleware.js";
 
 // ======================================================
-// 🚀 ROUTER
+// ROUTER
 // ======================================================
 
 const router = express.Router();
 
 // ======================================================
-// 📁 PROJECT ROUTES
+// PROJECT ROUTES
 // ======================================================
 
 router.route("/")
 
-  // ➕ Create Project
+  // Create Project
   .post(protect, createProject)
 
-  // 📥 Get Projects
+  // Get Projects
   .get(protect, getProjects);
 
 // ======================================================
-// ✏️ UPDATE / DELETE PROJECT
+// UPDATE / DELETE PROJECT
 // ======================================================
 
 router.route("/:id")
 
-  // ✏️ Update Project
+  // Update Project
   .put(protect, updateProject)
 
-  // ❌ Delete Project
+  // Delete Project
   .delete(protect, deleteProject);
 
 // ======================================================
-// 👥 INVITE MEMBER TO PROJECT
+// INVITE MEMBER TO PROJECT
 // ======================================================
 
 router.post(
@@ -63,7 +63,7 @@ router.post(
 );
 
 // ======================================================
-// 🚀 EXPORT
+// EXPORT
 // ======================================================
 
 export default router;

@@ -1,23 +1,23 @@
 // ======================================================
-// 📚 PREMIUM RESPONSIVE SIDEBAR + MOBILE DRAWER
+// RESPONSIVE SIDEBAR + MOBILE DRAWER
 // ======================================================
 
 import { useState } from "react";
 
 // ======================================================
-// 🌐 ROUTER
+// ROUTER
 // ======================================================
 
 import { useNavigate } from "react-router-dom";
 
 // ======================================================
-// 🔥 TOASTS
+// TOASTS
 // ======================================================
 
 import toast from "react-hot-toast";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -32,7 +32,7 @@ import {
 } from "lucide-react";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import {
@@ -46,7 +46,7 @@ export default function Sidebar({
 }) {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [open, setOpen] =
@@ -55,7 +55,7 @@ export default function Sidebar({
   const navigate = useNavigate();
 
   // ======================================================
-  // 📌 SCROLL TO SECTION
+  // SCROLL TO SECTION
   // ======================================================
 
   const scrollToSection = (id) => {
@@ -80,20 +80,20 @@ export default function Sidebar({
   };
 
   // ======================================================
-  // 🤖 AI SUGGESTIONS
+  // AI SUGGESTIONS
   // ======================================================
 
   const handleAISuggestions = () => {
 
     toast.success(
-      "AI Suggestions feature coming soon 🤖"
+      "AI Suggestions feature coming soon"
     );
 
     setOpen(false);
   };
 
   // ======================================================
-  // 🚪 LOGOUT
+  // LOGOUT
   // ======================================================
 
   const handleLogout = () => {
@@ -110,7 +110,7 @@ export default function Sidebar({
   };
 
   // ======================================================
-  // 🎨 NAV BUTTON STYLE
+  // NAV BUTTON STYLE
   // ======================================================
 
   const navButton = `
@@ -142,14 +142,14 @@ export default function Sidebar({
   `;
 
   // ======================================================
-  // 📚 SIDEBAR CONTENT
+  // SIDEBAR CONTENT
   // ======================================================
 
   const SidebarContent = () => (
 
     <>
       {/* ======================================================
-          🌈 BACKGROUND GLOW
+          BACKGROUND GLOW
       ====================================================== */}
 
       <div className="
@@ -170,7 +170,7 @@ export default function Sidebar({
       <div className="relative z-10">
 
         {/* ======================================================
-            🏷️ LOGO
+            LOGO
         ====================================================== */}
 
         <motion.div
@@ -267,7 +267,7 @@ export default function Sidebar({
         </motion.div>
 
         {/* ======================================================
-            🧭 NAVIGATION
+            NAVIGATION
         ====================================================== */}
 
         <nav className="space-y-4">
@@ -557,7 +557,7 @@ export default function Sidebar({
   );
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (

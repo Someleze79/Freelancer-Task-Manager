@@ -14,14 +14,14 @@ import upload from "../middleware/uploadMiddleware.js";
 const router = express.Router();
 
 // ======================================================
-// 📁 Tasks under a specific project (USER)
+// Tasks under a specific project (USER)
 // ======================================================
 router.route("/:projectId")
   .post(protect, createTask)
   .get(protect, getTasksByProject);
 
 // ======================================================
-// 📎 Upload file (USER)
+// Upload file (USER)
 // ======================================================
 router.post(
   "/task/:id/upload",
@@ -31,14 +31,14 @@ router.post(
 );
 
 // ======================================================
-// 📌 Task operations (USER owns task)
+// Task operations (USER owns task)
 // ======================================================
 router.route("/task/:id")
   .put(protect, updateTask)
   .delete(protect, deleteTask);
 
 // ======================================================
-// 👑 ADMIN: Delete ANY task (GLOBAL CONTROL)
+// ADMIN: Delete ANY task (GLOBAL CONTROL)
 // ======================================================
 router.delete(
   "/admin/:id",

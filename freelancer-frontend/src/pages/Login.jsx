@@ -1,5 +1,5 @@
 // ======================================================
-// 🔐 PREMIUM ANIMATED LOGIN PAGE
+// LOGIN PAGE
 // ======================================================
 
 import { useState } from "react";
@@ -12,19 +12,19 @@ import API from "../api/axios";
 import { useAuth } from "../context/AuthContext";
 
 // ======================================================
-// 🍞 REACT HOT TOAST
+// REACT HOT TOAST
 // ======================================================
 
 import toast from "react-hot-toast";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import { motion } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -41,7 +41,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Login() {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [form, setForm] = useState({
@@ -57,7 +57,7 @@ export default function Login() {
   const { login } = useAuth();
 
   // ======================================================
-  // 📤 HANDLE LOGIN
+  // HANDLE LOGIN
   // ======================================================
 
   const handleSubmit = async (e) => {
@@ -77,7 +77,7 @@ export default function Login() {
       login(data);
 
       toast.success(
-        "Login successful 🚀"
+        "Login successful"
       );
 
       navigate("/dashboard");
@@ -95,7 +95,7 @@ export default function Login() {
   };
 
   // ======================================================
-  // 🎨 FEATURES
+  // FEATURES
   // ======================================================
 
   const features = [
@@ -123,7 +123,7 @@ export default function Login() {
   ];
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -138,7 +138,7 @@ export default function Login() {
     ">
 
       {/* ======================================================
-          🌌 BACKGROUND EFFECTS
+          BACKGROUND EFFECTS
       ====================================================== */}
 
       <div className="
@@ -194,7 +194,7 @@ export default function Login() {
       />
 
       {/* ======================================================
-          🌟 LEFT SIDE
+          LEFT SIDE
       ====================================================== */}
 
       <motion.div
@@ -233,7 +233,7 @@ export default function Login() {
       >
 
         {/* ======================================================
-            🏷️ LOGO
+            LOGO
         ====================================================== */}
 
         <motion.div
@@ -287,7 +287,7 @@ export default function Login() {
         </motion.div>
 
         {/* ======================================================
-            📝 HERO CONTENT
+            HERO CONTENT
         ====================================================== */}
 
         <div>
@@ -367,7 +367,7 @@ export default function Login() {
           </motion.p>
 
           {/* ======================================================
-              ✨ FEATURES
+              FEATURES
           ====================================================== */}
 
           <div className="space-y-8">
@@ -456,7 +456,7 @@ export default function Login() {
         </div>
 
         {/* ======================================================
-            🖼️ DASHBOARD ILLUSTRATION
+            DASHBOARD ILLUSTRATION
         ====================================================== */}
 
         <motion.div
@@ -642,7 +642,7 @@ export default function Login() {
       </motion.div>
 
       {/* ======================================================
-          🔐 RIGHT SIDE
+          RIGHT SIDE
       ====================================================== */}
 
       <div className="
@@ -1011,7 +1011,7 @@ export default function Login() {
                 }}
 
                 onClick={() =>
-                  toast("Google login coming soon 🚀")
+                  toast("Google login coming soon")
                 }
 
                 className="
@@ -1052,7 +1052,7 @@ export default function Login() {
                 }}
 
                 onClick={() =>
-                  toast("GitHub login coming soon 🚀")
+                  toast("GitHub login coming soon")
                 }
 
                 className="

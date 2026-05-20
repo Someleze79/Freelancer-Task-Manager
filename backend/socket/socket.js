@@ -1,5 +1,5 @@
 // ======================================================
-// 🔌 SOCKET.IO SERVER
+// SOCKET.IO SERVER
 // ======================================================
 
 import { Server }
@@ -8,7 +8,7 @@ from "socket.io";
 let io;
 
 // ======================================================
-// 🚀 INITIALIZE SOCKET SERVER
+// INITIALIZE SOCKET SERVER
 // ======================================================
 
 export const initSocket = (server) => {
@@ -41,7 +41,7 @@ export const initSocket = (server) => {
   });
 
   // ======================================================
-  // 👤 USER CONNECTION
+  // USER CONNECTION
   // ======================================================
 
   io.on("connection", (socket) => {
@@ -54,7 +54,7 @@ export const initSocket = (server) => {
     );
 
     // ======================================================
-    // 📁 JOIN PROJECT ROOM
+    // JOIN PROJECT ROOM
     // ======================================================
 
     socket.on(
@@ -73,7 +73,7 @@ export const initSocket = (server) => {
     );
 
     // ======================================================
-    // 💬 CHAT MESSAGE
+    // CHAT MESSAGE
     // ======================================================
 
     socket.on(
@@ -94,7 +94,7 @@ export const initSocket = (server) => {
     );
 
     // ======================================================
-    // ⌨️ TYPING INDICATOR
+    // TYPING INDICATOR
     // ======================================================
 
     socket.on(
@@ -115,7 +115,7 @@ export const initSocket = (server) => {
     );
 
     // ======================================================
-    // ❌ DISCONNECT
+    // DISCONNECT
     // ======================================================
 
     socket.on("disconnect", () => {
@@ -133,7 +133,7 @@ export const initSocket = (server) => {
 };
 
 // ======================================================
-// 📡 EXPORT SOCKET INSTANCE
+// EXPORT SOCKET INSTANCE
 // ======================================================
 
 export const getIO = () => io;

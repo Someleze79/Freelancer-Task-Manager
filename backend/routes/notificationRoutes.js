@@ -10,7 +10,7 @@ const router = express.Router();
 // 📥 Get all notifications
 router.get("/", protect, getNotifications);
 
-// ✅ Mark notification as read
+// Mark notification as read
 router.put("/:id", protect, markAsRead);
 
 export default router;

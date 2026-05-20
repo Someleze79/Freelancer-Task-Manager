@@ -1,5 +1,5 @@
 // ======================================================
-// 🚀 ULTIMATE AI POWERED REAL-TIME DASHBOARD
+// REAL-TIME DASHBOARD
 // ======================================================
 
 import {
@@ -15,20 +15,20 @@ import {
 } from "framer-motion";
 
 // ======================================================
-// 🔌 API + AUTH
+// API + AUTH
 // ======================================================
 
 import API from "../api/axios";
 import { useAuth } from "../context/AuthContext";
 
 // ======================================================
-// 🔌 SOCKET
+// SOCKET
 // ======================================================
 
 import socket from "../socket";
 
 // ======================================================
-// 🔥 TOASTS
+// TOASTS
 // ======================================================
 
 import toast, {
@@ -36,7 +36,7 @@ import toast, {
 } from "react-hot-toast";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -47,7 +47,7 @@ import {
 } from "lucide-react";
 
 // ======================================================
-// 🧩 COMPONENTS
+// COMPONENTS
 // ======================================================
 
 import Sidebar from "../components/Sidebar";
@@ -68,7 +68,7 @@ import AIInsights from "../components/AIInsights";
 export default function Dashboard() {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [projects, setProjects] =
@@ -90,7 +90,7 @@ export default function Dashboard() {
     useState(false);
 
   // ======================================================
-  // 👤 PROFILE
+  // PROFILE
   // ======================================================
 
   const [profile, setProfile] =
@@ -115,7 +115,7 @@ export default function Dashboard() {
   const { logout } = useAuth();
 
   // ======================================================
-  // 💾 SAVE PROFILE
+  // SAVE PROFILE
   // ======================================================
 
   useEffect(() => {
@@ -128,7 +128,7 @@ export default function Dashboard() {
   }, [profile]);
 
   // ======================================================
-  // 📥 FETCH PROJECTS
+  // FETCH PROJECTS
   // ======================================================
 
   const fetchProjects = async () => {
@@ -147,7 +147,7 @@ export default function Dashboard() {
   };
 
   // ======================================================
-  // 📥 FETCH TASKS
+  // FETCH TASKS
   // ======================================================
 
   const fetchTasks = async (
@@ -172,7 +172,7 @@ export default function Dashboard() {
   };
 
   // ======================================================
-  // 🚀 INITIAL LOAD
+  // INITIAL LOAD
   // ======================================================
 
   useEffect(() => {
@@ -182,7 +182,7 @@ export default function Dashboard() {
   }, []);
 
   // ======================================================
-  // 🔄 LOAD TASKS
+  // LOAD TASKS
   // ======================================================
 
   useEffect(() => {
@@ -197,7 +197,7 @@ export default function Dashboard() {
   }, [selectedProject]);
 
   // ======================================================
-  // 🔌 JOIN PROJECT ROOM
+  // JOIN PROJECT ROOM
   // ======================================================
 
   useEffect(() => {
@@ -213,7 +213,7 @@ export default function Dashboard() {
   }, [selectedProject]);
 
   // ======================================================
-  // ⚡ REAL-TIME TASK UPDATES
+  // REAL-TIME TASK UPDATES
   // ======================================================
 
   useEffect(() => {
@@ -241,7 +241,7 @@ export default function Dashboard() {
   }, [selectedProject]);
 
   // ======================================================
-  // 📁 ADD PROJECT FROM DEVICE
+  // ADD PROJECT FROM DEVICE
   // ======================================================
 
   const handleAddProject =
@@ -276,7 +276,7 @@ export default function Dashboard() {
     };
 
   // ======================================================
-  // 🤖 AI INSIGHTS
+  // AI INSIGHTS
   // ======================================================
 
   const aiSuggestions = useMemo(() => {
@@ -330,7 +330,7 @@ export default function Dashboard() {
   }, [tasks]);
 
   // ======================================================
-  // 🎨 GLASS CARD
+  // GLASS CARD
   // ======================================================
 
   const glassCard = `
@@ -343,7 +343,7 @@ export default function Dashboard() {
   `;
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (

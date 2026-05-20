@@ -1,12 +1,12 @@
 // ======================================================
-// 🔝 PREMIUM FULLY FUNCTIONAL RESPONSIVE TOPBAR
+// TOPBAR
 // ======================================================
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -24,7 +24,7 @@ export default function Topbar({
 }) {
 
   // ======================================================
-  // 👤 PROFILE STATE
+  // PROFILE STATE
   // ======================================================
 
   const [profile, setProfile] = useState(() => {
@@ -50,7 +50,7 @@ export default function Topbar({
     useState(profile.name);
 
   // ======================================================
-  // 💾 SAVE PROFILE
+  // SAVE PROFILE
   // ======================================================
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function Topbar({
   }, [profile]);
 
   // ======================================================
-  // 👋 GREETING
+  // GREETING
   // ======================================================
 
   const hour = new Date().getHours();
@@ -84,7 +84,7 @@ export default function Topbar({
   }
 
   // ======================================================
-  // 🖼️ CHANGE PROFILE PICTURE
+  // CHANGE PROFILE PICTURE
   // ======================================================
 
   const handleAvatarChange = (e) => {
@@ -107,7 +107,7 @@ export default function Topbar({
   };
 
   // ======================================================
-  // ✏️ SAVE NAME
+  // SAVE NAME
   // ======================================================
 
   const handleSaveName = () => {
@@ -123,7 +123,7 @@ export default function Topbar({
   };
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -158,7 +158,7 @@ export default function Topbar({
       >
 
         {/* ======================================================
-            🏷️ LEFT SIDE
+            LEFT SIDE
         ====================================================== */}
 
         <div>
@@ -210,7 +210,7 @@ export default function Topbar({
         </div>
 
         {/* ======================================================
-            👤 RIGHT SIDE
+            RIGHT SIDE
         ====================================================== */}
 
         <div className="
@@ -223,7 +223,7 @@ export default function Topbar({
         ">
 
           {/* ======================================================
-              ➕ ADD PROJECT
+              ADD PROJECT
           ====================================================== */}
 
           <motion.button
@@ -266,7 +266,7 @@ export default function Topbar({
           </motion.button>
 
           {/* ======================================================
-              🔔 NOTIFICATIONS
+              NOTIFICATIONS
           ====================================================== */}
 
           <motion.button
@@ -324,7 +324,7 @@ export default function Topbar({
           </motion.button>
 
           {/* ======================================================
-              👤 PROFILE CARD
+              PROFILE CARD
           ====================================================== */}
 
           <div className="relative">
@@ -427,7 +427,7 @@ export default function Topbar({
             </motion.button>
 
             {/* ======================================================
-                📋 DROPDOWN
+                DROPDOWN
             ====================================================== */}
 
             <AnimatePresence>
@@ -548,7 +548,7 @@ export default function Topbar({
       </motion.div>
 
       {/* ======================================================
-          ✏️ EDIT NAME MODAL
+          EDIT NAME MODAL
       ====================================================== */}
 
       <AnimatePresence>

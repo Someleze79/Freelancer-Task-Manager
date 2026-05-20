@@ -1,11 +1,11 @@
 // ======================================================
-// 📌 TASK MODEL
+// TASK MODEL
 // ======================================================
 
 import mongoose from "mongoose";
 
 // ======================================================
-// 📎 ATTACHMENT SCHEMA
+// ATTACHMENT SCHEMA
 // ======================================================
 
 const attachmentSchema = mongoose.Schema({
@@ -14,7 +14,7 @@ const attachmentSchema = mongoose.Schema({
 });
 
 // ======================================================
-// 📌 TASK SCHEMA
+// TASK SCHEMA
 // ======================================================
 
 const taskSchema = mongoose.Schema(
@@ -54,7 +54,7 @@ const taskSchema = mongoose.Schema(
     },
 
     // ======================================================
-    // 👤 ASSIGNED USER
+    // ASSIGNED USER
     // ======================================================
 
     assignedTo: {

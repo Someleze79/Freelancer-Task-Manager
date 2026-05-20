@@ -1,11 +1,11 @@
 // ======================================================
-// 📁 PROJECT MODEL
+// PROJECT MODEL
 // ======================================================
 
 import mongoose from "mongoose";
 
 // ======================================================
-// 📁 PROJECT SCHEMA
+// PROJECT SCHEMA
 // ======================================================
 
 const projectSchema = mongoose.Schema(
@@ -29,7 +29,7 @@ const projectSchema = mongoose.Schema(
     },
 
     // ======================================================
-    // 👥 PROJECT MEMBERS
+    // PROJECT MEMBERS
     // ======================================================
 
     members: [

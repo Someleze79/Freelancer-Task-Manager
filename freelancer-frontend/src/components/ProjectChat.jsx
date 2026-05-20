@@ -1,5 +1,5 @@
 // ======================================================
-// 💬 REAL-TIME PROJECT CHAT
+// REAL-TIME PROJECT CHAT
 // ======================================================
 
 import {
@@ -19,7 +19,7 @@ export default function ProjectChat({
 }) {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [message, setMessage] =
@@ -35,7 +35,7 @@ export default function ProjectChat({
     useRef(null);
 
   // ======================================================
-  // 📩 RECEIVE MESSAGES
+  // RECEIVE MESSAGES
   // ======================================================
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function ProjectChat({
   }, []);
 
   // ======================================================
-  // 🔽 AUTO SCROLL
+  // AUTO SCROLL
   // ======================================================
 
   useEffect(() => {
@@ -95,7 +95,7 @@ export default function ProjectChat({
   }, [messages]);
 
   // ======================================================
-  // 📤 SEND MESSAGE
+  // SEND MESSAGE
   // ======================================================
 
   const sendMessage = () => {
@@ -126,7 +126,7 @@ export default function ProjectChat({
   };
 
   // ======================================================
-  // ⌨️ TYPING
+  // TYPING
   // ======================================================
 
   const handleTyping = () => {
@@ -144,7 +144,7 @@ export default function ProjectChat({
   };
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (

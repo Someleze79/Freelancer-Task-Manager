@@ -1,5 +1,5 @@
 // ======================================================
-// 🔐 AUTH CONTEXT (GLOBAL AUTH STATE MANAGEMENT)
+// AUTH CONTEXT (GLOBAL AUTH STATE MANAGEMENT)
 // ======================================================
 
 import { createContext, useContext, useState } from "react";
@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   );
 
   // ======================================================
-  // 🔑 LOGIN FUNCTION
+  // LOGIN FUNCTION
   // ======================================================
   const login = (data) => {
     // Save user + token in localStorage
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   // ======================================================
-  // 🚪 LOGOUT FUNCTION
+  // LOGOUT FUNCTION
   // ======================================================
   const logout = () => {
     // Remove user from storage

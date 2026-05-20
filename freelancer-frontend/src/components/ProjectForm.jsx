@@ -1,18 +1,18 @@
 // ======================================================
-// ➕ PREMIUM RESPONSIVE PROJECT FORM
+// PROJECT FORM
 // ======================================================
 
 import { useState } from "react";
 import API from "../api/axios";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import { motion } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -25,7 +25,7 @@ export default function ProjectForm({
 }) {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [name, setName] =
@@ -35,7 +35,7 @@ export default function ProjectForm({
     useState(false);
 
   // ======================================================
-  // 📤 CREATE PROJECT
+  // CREATE PROJECT
   // ======================================================
 
   const handleSubmit = async (e) => {
@@ -71,7 +71,7 @@ export default function ProjectForm({
   };
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -79,7 +79,7 @@ export default function ProjectForm({
     <motion.form
 
       // ======================================================
-      // 🎞️ ENTRY ANIMATION
+      // ENTRY ANIMATION
       // ======================================================
 
       initial={{
@@ -108,7 +108,7 @@ export default function ProjectForm({
     >
 
       {/* ======================================================
-          📝 INPUT WRAPPER
+          INPUT WRAPPER
       ====================================================== */}
 
       <div className="
@@ -162,7 +162,7 @@ export default function ProjectForm({
       </div>
 
       {/* ======================================================
-          🚀 BUTTON
+          BUTTON
       ====================================================== */}
 
       <motion.button

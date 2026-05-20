@@ -1,5 +1,5 @@
 // ======================================================
-// 📌 TASK CONTROLLER (PREMIUM REAL-TIME VERSION)
+// TASK CONTROLLER
 // ======================================================
 
 import Task from "../models/Task.js";
@@ -8,7 +8,7 @@ import Notification from "../models/Notification.js";
 import mongoose from "mongoose";
 
 // ======================================================
-// ➕ CREATE TASK
+// CREATE TASK
 // ======================================================
 
 export const createTask = async (req, res) => {
@@ -25,7 +25,7 @@ export const createTask = async (req, res) => {
     const { projectId } = req.params;
 
     // ======================================================
-    // ✅ VALIDATE PROJECT ID
+    // VALIDATE PROJECT ID
     // ======================================================
 
     if (
@@ -40,7 +40,7 @@ export const createTask = async (req, res) => {
     }
 
     // ======================================================
-    // 📁 FIND PROJECT
+    // FIND PROJECT
     // ======================================================
 
     const project =
@@ -54,7 +54,7 @@ export const createTask = async (req, res) => {
     }
 
     // ======================================================
-    // 🔐 AUTHORIZE USER
+    // AUTHORIZE USER
     // ======================================================
 
     if (
@@ -68,7 +68,7 @@ export const createTask = async (req, res) => {
     }
 
     // ======================================================
-    // 🚀 CREATE TASK
+    // CREATE TASK
     // ======================================================
 
     const task = await Task.create({
@@ -84,7 +84,7 @@ export const createTask = async (req, res) => {
     });
 
     // ======================================================
-    // 🔔 CREATE NOTIFICATION
+    // CREATE NOTIFICATION
     // ======================================================
 
     const notification =
@@ -98,7 +98,7 @@ export const createTask = async (req, res) => {
       });
 
     // ======================================================
-    // 🔴 REAL-TIME EVENTS
+    // REAL-TIME EVENTS
     // ======================================================
 
     if (global.io) {
@@ -115,7 +115,7 @@ export const createTask = async (req, res) => {
     }
 
     // ======================================================
-    // ✅ RESPONSE
+    // RESPONSE
     // ======================================================
 
     res.status(201).json(task);
@@ -131,7 +131,7 @@ export const createTask = async (req, res) => {
 };
 
 // ======================================================
-// 📥 GET TASKS BY PROJECT
+// GET TASKS BY PROJECT
 // ======================================================
 
 export const getTasksByProject =
@@ -148,7 +148,7 @@ export const getTasksByProject =
       } = req.query;
 
       // ======================================================
-      // ✅ VALIDATE PROJECT ID
+      // VALIDATE PROJECT ID
       // ======================================================
 
       if (
@@ -163,7 +163,7 @@ export const getTasksByProject =
       }
 
       // ======================================================
-      // 🔎 QUERY
+      // QUERY
       // ======================================================
 
       let query = {
@@ -175,7 +175,7 @@ export const getTasksByProject =
       };
 
       // ======================================================
-      // 🔎 FILTERS
+      // FILTERS
       // ======================================================
 
       if (status) {
@@ -187,7 +187,7 @@ export const getTasksByProject =
       }
 
       // ======================================================
-      // 🔍 SEARCH
+      // SEARCH
       // ======================================================
 
       if (search) {
@@ -201,7 +201,7 @@ export const getTasksByProject =
       }
 
       // ======================================================
-      // 📊 SORTING
+      // SORTING
       // ======================================================
 
       const sortBy =
@@ -214,7 +214,7 @@ export const getTasksByProject =
           : -1;
 
       // ======================================================
-      // 📄 PAGINATION
+      // PAGINATION
       // ======================================================
 
       const page =
@@ -227,14 +227,14 @@ export const getTasksByProject =
         (page - 1) * limit;
 
       // ======================================================
-      // 📊 TOTAL
+      // TOTAL
       // ======================================================
 
       const total =
         await Task.countDocuments(query);
 
       // ======================================================
-      // 📥 FETCH TASKS
+      // FETCH TASKS
       // ======================================================
 
       const tasks = await Task.find(query)
@@ -253,7 +253,7 @@ export const getTasksByProject =
         .limit(limit);
 
       // ======================================================
-      // ✅ RESPONSE
+      // RESPONSE
       // ======================================================
 
       res.json({
@@ -279,7 +279,7 @@ export const getTasksByProject =
   };
 
 // ======================================================
-// 📎 UPLOAD FILE TO TASK
+// UPLOAD FILE TO TASK
 // ======================================================
 
 export const uploadTaskFile =
@@ -290,7 +290,7 @@ export const uploadTaskFile =
       const { id } = req.params;
 
       // ======================================================
-      // ✅ VALIDATE TASK ID
+      // VALIDATE TASK ID
       // ======================================================
 
       if (
@@ -303,7 +303,7 @@ export const uploadTaskFile =
       }
 
       // ======================================================
-      // ❌ CHECK FILE
+      // CHECK FILE
       // ======================================================
 
       if (!req.file) {
@@ -314,7 +314,7 @@ export const uploadTaskFile =
       }
 
       // ======================================================
-      // 📥 FIND TASK
+      // FIND TASK
       // ======================================================
 
       const task =
@@ -328,7 +328,7 @@ export const uploadTaskFile =
       }
 
       // ======================================================
-      // 🔐 AUTHORIZE USER
+      // AUTHORIZE USER
       // ======================================================
 
       if (
@@ -342,7 +342,7 @@ export const uploadTaskFile =
       }
 
       // ======================================================
-      // 📎 ADD ATTACHMENT
+      // ADD ATTACHMENT
       // ======================================================
 
       task.attachments.push({
@@ -358,7 +358,7 @@ export const uploadTaskFile =
       await task.save();
 
       // ======================================================
-      // 🔔 NOTIFICATION
+      // NOTIFICATION
       // ======================================================
 
       const notification =
@@ -372,7 +372,7 @@ export const uploadTaskFile =
         });
 
       // ======================================================
-      // 🔴 REAL-TIME EVENTS
+      // REAL-TIME EVENTS
       // ======================================================
 
       if (global.io) {
@@ -389,7 +389,7 @@ export const uploadTaskFile =
       }
 
       // ======================================================
-      // ✅ RESPONSE
+      // RESPONSE
       // ======================================================
 
       res.json({
@@ -412,7 +412,7 @@ export const uploadTaskFile =
   };
 
 // ======================================================
-// ✏️ UPDATE TASK
+// UPDATE TASK
 // ======================================================
 
 export const updateTask =
@@ -423,7 +423,7 @@ export const updateTask =
       const { id } = req.params;
 
       // ======================================================
-      // ✅ VALIDATE TASK ID
+      // VALIDATE TASK ID
       // ======================================================
 
       if (
@@ -436,7 +436,7 @@ export const updateTask =
       }
 
       // ======================================================
-      // 📥 FIND TASK
+      // FIND TASK
       // ======================================================
 
       const task =
@@ -450,7 +450,7 @@ export const updateTask =
       }
 
       // ======================================================
-      // 🔐 AUTHORIZE USER
+      // AUTHORIZE USER
       // ======================================================
 
       if (
@@ -470,7 +470,7 @@ export const updateTask =
       }
 
       // ======================================================
-      // 🚀 UPDATE TASK
+      // UPDATE TASK
       // ======================================================
 
       const updatedTask =
@@ -486,7 +486,7 @@ export const updateTask =
         );
 
       // ======================================================
-      // 🔔 NOTIFICATION
+      // NOTIFICATION
       // ======================================================
 
       const notification =
@@ -500,7 +500,7 @@ export const updateTask =
         });
 
       // ======================================================
-      // 🔴 REAL-TIME EVENTS
+      // REAL-TIME EVENTS
       // ======================================================
 
       if (global.io) {
@@ -517,7 +517,7 @@ export const updateTask =
       }
 
       // ======================================================
-      // ✅ RESPONSE
+      // RESPONSE
       // ======================================================
 
       res.json(updatedTask);
@@ -533,7 +533,7 @@ export const updateTask =
   };
 
 // ======================================================
-// ❌ DELETE TASK
+// DELETE TASK
 // ======================================================
 
 export const deleteTask =
@@ -544,7 +544,7 @@ export const deleteTask =
       const { id } = req.params;
 
       // ======================================================
-      // ✅ VALIDATE TASK ID
+      // VALIDATE TASK ID
       // ======================================================
 
       if (
@@ -557,7 +557,7 @@ export const deleteTask =
       }
 
       // ======================================================
-      // 📥 FIND TASK
+      // FIND TASK
       // ======================================================
 
       const task =
@@ -571,7 +571,7 @@ export const deleteTask =
       }
 
       // ======================================================
-      // 🔐 AUTHORIZE USER
+      // AUTHORIZE USER
       // ======================================================
 
       if (
@@ -591,13 +591,13 @@ export const deleteTask =
       }
 
       // ======================================================
-      // ❌ DELETE TASK
+      // DELETE TASK
       // ======================================================
 
       await task.deleteOne();
 
       // ======================================================
-      // 🔔 NOTIFICATION
+      // NOTIFICATION
       // ======================================================
 
       const notification =
@@ -611,7 +611,7 @@ export const deleteTask =
         });
 
       // ======================================================
-      // 🔴 REAL-TIME EVENTS
+      // REAL-TIME EVENTS
       // ======================================================
 
       if (global.io) {
@@ -628,7 +628,7 @@ export const deleteTask =
       }
 
       // ======================================================
-      // ✅ RESPONSE
+      // RESPONSE
       // ======================================================
 
       res.json({

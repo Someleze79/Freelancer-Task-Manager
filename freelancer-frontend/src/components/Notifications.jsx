@@ -1,5 +1,5 @@
 // ======================================================
-// 🔔 PREMIUM REAL-TIME NOTIFICATIONS PANEL
+// REAL-TIME NOTIFICATIONS PANEL
 // ======================================================
 
 import {
@@ -8,14 +8,14 @@ import {
 } from "react";
 
 // ======================================================
-// 🌐 API + SOCKET
+// API + SOCKET
 // ======================================================
 
 import API from "../api/axios";
 import socket from "../socket";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import {
@@ -24,7 +24,7 @@ import {
 } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -35,7 +35,7 @@ import {
 } from "lucide-react";
 
 // ======================================================
-// 🍞 TOAST
+// TOAST
 // ======================================================
 
 import toast from "react-hot-toast";
@@ -43,7 +43,7 @@ import toast from "react-hot-toast";
 export default function Notifications() {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [notifications, setNotifications] =
@@ -53,7 +53,7 @@ export default function Notifications() {
     useState(true);
 
   // ======================================================
-  // 📥 FETCH NOTIFICATIONS
+  // FETCH NOTIFICATIONS
   // ======================================================
 
   const fetchNotifications =
@@ -79,7 +79,7 @@ export default function Notifications() {
     };
 
   // ======================================================
-  // 🚀 INITIAL LOAD
+  // INITIAL LOAD
   // ======================================================
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Notifications() {
   }, []);
 
   // ======================================================
-  // 🔴 REAL-TIME SOCKET EVENTS
+  // REAL-TIME SOCKET EVENTS
   // ======================================================
 
   useEffect(() => {
@@ -121,7 +121,7 @@ export default function Notifications() {
   }, []);
 
   // ======================================================
-  // ✅ MARK AS READ
+  // MARK AS READ
   // ======================================================
 
   const markAsRead =
@@ -155,7 +155,7 @@ export default function Notifications() {
     };
 
   // ======================================================
-  // ❌ DELETE NOTIFICATION
+  // DELETE NOTIFICATION
   // ======================================================
 
   const deleteNotification =
@@ -189,7 +189,7 @@ export default function Notifications() {
     };
 
   // ======================================================
-  // 📊 UNREAD COUNT
+  // UNREAD COUNT
   // ======================================================
 
   const unreadCount =
@@ -198,7 +198,7 @@ export default function Notifications() {
     ).length;
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -221,7 +221,7 @@ export default function Notifications() {
     >
 
       {/* ======================================================
-          🏷️ HEADER
+          HEADER
       ====================================================== */}
 
       <div className="
@@ -320,7 +320,7 @@ export default function Notifications() {
       </div>
 
       {/* ======================================================
-          📭 LOADING
+          LOADING
       ====================================================== */}
 
       {loading ? (
@@ -568,7 +568,7 @@ export default function Notifications() {
             ) : (
 
               // ======================================================
-              // 📭 EMPTY STATE
+              // EMPTY STATE
               // ======================================================
 
               <motion.div

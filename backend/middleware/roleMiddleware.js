@@ -1,11 +1,11 @@
 // ======================================================
-// 👥 ROLE-BASED ACCESS CONTROL MIDDLEWARE
+// ROLE-BASED ACCESS CONTROL MIDDLEWARE
 // ======================================================
 
 // Allow only specific roles (flexible version)
 export const authorizeRoles = (...roles) => {
   return (req, res, next) => {
-    // req.user comes from your authMiddleware (protect)
+    // req.user comes from authMiddleware (protect)
     if (!req.user || !roles.includes(req.user.role)) {
       return res.status(403).json({
         message: `Access denied. Allowed roles: ${roles.join(", ")}`

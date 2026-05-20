@@ -1,18 +1,18 @@
 // ======================================================
-// ➕ PREMIUM RESPONSIVE TASK FORM
+// RESPONSIVE TASK FORM
 // ======================================================
 
 import { useState } from "react";
 import API from "../api/axios";
 
 // ======================================================
-// 🎞️ FRAMER MOTION
+// FRAMER MOTION
 // ======================================================
 
 import { motion } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -27,7 +27,7 @@ export default function TaskForm({
 }) {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [form, setForm] = useState({
@@ -45,7 +45,7 @@ export default function TaskForm({
     useState(false);
 
   // ======================================================
-  // 📤 CREATE TASK
+  // CREATE TASK
   // ======================================================
 
   const handleSubmit = async (e) => {
@@ -86,7 +86,7 @@ export default function TaskForm({
   };
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -94,7 +94,7 @@ export default function TaskForm({
     <motion.form
 
       // ======================================================
-      // 🎞️ ENTRY ANIMATION
+      // ENTRY ANIMATION
       // ======================================================
 
       initial={{
@@ -130,7 +130,7 @@ export default function TaskForm({
     >
 
       {/* ======================================================
-          🏷️ HEADER
+          HEADER
       ====================================================== */}
 
       <div className="
@@ -174,7 +174,7 @@ export default function TaskForm({
       </div>
 
       {/* ======================================================
-          📝 TITLE INPUT
+          TITLE INPUT
       ====================================================== */}
 
       <input
@@ -208,7 +208,7 @@ export default function TaskForm({
       />
 
       {/* ======================================================
-          📄 DESCRIPTION
+          DESCRIPTION
       ====================================================== */}
 
       <textarea
@@ -242,7 +242,7 @@ export default function TaskForm({
       />
 
       {/* ======================================================
-          ⚡ PRIORITY + DATE
+          PRIORITY + DATE
       ====================================================== */}
 
       <div className="
@@ -253,7 +253,7 @@ export default function TaskForm({
       ">
 
         {/* ======================================================
-            🚩 PRIORITY
+            PRIORITY
         ====================================================== */}
 
         <div className="relative">
@@ -314,7 +314,7 @@ export default function TaskForm({
         </div>
 
         {/* ======================================================
-            📅 DATE
+            DATE
         ====================================================== */}
 
         <div className="relative">
@@ -365,7 +365,7 @@ export default function TaskForm({
       </div>
 
       {/* ======================================================
-          🚀 SUBMIT BUTTON
+          SUBMIT BUTTON
       ====================================================== */}
 
       <motion.button

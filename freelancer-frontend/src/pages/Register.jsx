@@ -1,5 +1,5 @@
 // ======================================================
-// 📝 PREMIUM ANIMATED REGISTER PAGE
+// REGISTER PAGE
 // ======================================================
 
 import { useState } from "react";
@@ -12,7 +12,7 @@ import {
 import API from "../api/axios";
 
 // ======================================================
-// 🔥 REACT HOT TOAST
+// REACT HOT TOAST
 // ======================================================
 
 import toast from "react-hot-toast";
@@ -24,7 +24,7 @@ import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 
 // ======================================================
-// 🎨 ICONS
+// ICONS
 // ======================================================
 
 import {
@@ -40,7 +40,7 @@ import {
 export default function Register() {
 
   // ======================================================
-  // 🧠 STATE
+  // STATE
   // ======================================================
 
   const [form, setForm] = useState({
@@ -55,7 +55,7 @@ export default function Register() {
   const navigate = useNavigate();
 
   // ======================================================
-  // 📤 HANDLE REGISTER
+  // HANDLE REGISTER
   // ======================================================
 
   const handleSubmit = async (e) => {
@@ -72,7 +72,7 @@ export default function Register() {
       );
 
       // ======================================================
-      // 🔥 SUCCESS TOAST
+      // SUCCESS TOAST
       // ======================================================
 
       toast.success(
@@ -84,7 +84,7 @@ export default function Register() {
     } catch (error) {
 
       // ======================================================
-      // ❌ ERROR TOAST
+      // ERROR TOAST
       // ======================================================
 
       toast.error(
@@ -99,7 +99,7 @@ export default function Register() {
   };
 
   // ======================================================
-  // 🎨 FEATURES
+  // FEATURES
   // ======================================================
 
   const features = [
@@ -129,7 +129,7 @@ export default function Register() {
   ];
 
   // ======================================================
-  // 🎨 UI
+  // UI
   // ======================================================
 
   return (
@@ -144,7 +144,7 @@ export default function Register() {
     ">
 
       {/* ======================================================
-          🌌 BACKGROUND GLOW
+          BACKGROUND GLOW
       ====================================================== */}
 
       <div className="
@@ -170,7 +170,7 @@ export default function Register() {
       " />
 
       {/* ======================================================
-          ✨ FLOATING PARTICLES
+          FLOATING PARTICLES
       ====================================================== */}
 
       <div className="
@@ -214,7 +214,7 @@ export default function Register() {
       </div>
 
       {/* ======================================================
-          🌟 LEFT SIDE
+          LEFT SIDE
       ====================================================== */}
 
       <motion.div
@@ -249,7 +249,7 @@ export default function Register() {
       >
 
         {/* ======================================================
-            ✅ LOGO
+            LOGO
         ====================================================== */}
 
         <motion.div
@@ -302,7 +302,7 @@ export default function Register() {
         </motion.div>
 
         {/* ======================================================
-            🏷️ TITLE
+            TITLE
         ====================================================== */}
 
         <motion.h1
@@ -382,7 +382,7 @@ export default function Register() {
         </motion.p>
 
         {/* ======================================================
-            🚀 FEATURES
+            FEATURES
         ====================================================== */}
 
         <div className="space-y-8">
@@ -472,7 +472,7 @@ export default function Register() {
         </div>
 
         {/* ======================================================
-            🎨 DASHBOARD MOCKUP
+            DASHBOARD MOCKUP
         ====================================================== */}
 
         <motion.div
@@ -576,7 +576,7 @@ export default function Register() {
       </motion.div>
 
       {/* ======================================================
-          📝 RIGHT SIDE
+          RIGHT SIDE
       ====================================================== */}
 
       <div className="
@@ -591,7 +591,7 @@ export default function Register() {
       ">
 
         {/* ======================================================
-            🎞️ REGISTER CARD
+            REGISTER CARD
         ====================================================== */}
 
         <motion.div
