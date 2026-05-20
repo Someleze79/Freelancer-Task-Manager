@@ -87,32 +87,6 @@ A modern full-stack MERN productivity platform for freelancers and teams to mana
 
 ---
 
-## 📂 Project Structure
-
-root/
-│
-├── backend/
-│   ├── routes/
-│   ├── models/
-│   ├── middleware/
-│   ├── socket/
-│   ├── controllers/
-│   └── server.js
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   ├── api/
-│   │   └── socket.js
-│   │
-│   └── package.json
-│
-└── README.md
-
----
-
 ## ⚙️ Environment Variables
 
 Backend ".env"
@@ -137,7 +111,7 @@ VITE_SOCKET_URL=http://localhost:5000
 
 git clone https://github.com/Someleze79/Freelancer-Task-Manager.git
 
-cd Freelancer-Task-Manager
+cd freelancer-task-manager
 
 ---
 
