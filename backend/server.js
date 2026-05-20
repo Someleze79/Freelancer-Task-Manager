@@ -75,7 +75,7 @@ app.use(
 
       "http://localhost:5173",
 
-      "https://freelancer-frontend.onrender.com"
+      "https://freelancer-task-manager-pro.onrender.com"
     ],
 
     credentials: true
